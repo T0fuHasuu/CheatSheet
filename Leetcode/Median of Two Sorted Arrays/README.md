@@ -34,6 +34,6 @@ class Solution(object):
 ```
 > Else it will take the 2 middle index and divide by 2 as float
 ---
-## Note : This is slow but easy, here is the more faster using [(O(log(m+n)))]()
+## Note : This is slow but easy, here is the more faster using [(O(log(m+n)))](https://github.com/T0fuHasuu/CheatSheet/blob/main/Leetcode/Median%20of%20Two%20Sorted%20Arrays/BetterMain.py)
 ___
 ![Byebye](https://media1.tenor.com/m/bMV3HjqQADQAAAAC/working-from-home.gif)
