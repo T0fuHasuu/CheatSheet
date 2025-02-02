@@ -1,42 +1,37 @@
 # Romanian Clockwork : 
-
-    s = "LVIII"
-    map = {
-        'I': 1, 'V': 5, 'X': 10, 'L': 50,'C': 100, 'D': 500, 'M': 1000
-    }
-    total = 0
-    x = 0
-    for char in s:
-        x = map[char]
-        total = total + x
-    print(total)   
-
+```py
+s = "LVIII"
+map = {
+    'I': 1, 'V': 5, 'X': 10, 'L': 50,'C': 100, 'D': 500, 'M': 1000
+}
+total = 0
+x = 0
+for char in s:
+    x = map[char]
+    total = total + x
+print(total)   
+```
 # Checking Common Letter :
-
-    strs = ["flower", "flow", "flight"]
-
-    sLetter = []
-
-    shortest_str = min(strs, key=len)
-
-    """
-        What this do is, it will check for the shortest string and then let all the element in the array 
-        to start from index 0 and compare, if it the same it will add that letter to the sLetter[].
-        if not, it will break and end the loop.
-    """
-    for i in range(len(shortest_str)):
-        current_char = shortest_str[i]
-        if all(s[i] == current_char for s in strs):
-            sLetter.append(current_char)
-        else:
-            break
-
-    final = ''.join(sLetter)
-
-    print(final)
-
+```py
+strs = ["flower", "flow", "flight"]
+sLetter = []
+shortest_str = min(strs, key=len)
+"""
+    What this do is, it will check for the shortest string and then letall the element in the array 
+    to start from index 0 and compare, if it the same it will add thatletter to the sLetter[].
+    if not, it will break and end the loop.
+"""
+for i in range(len(shortest_str)):
+    current_char = shortest_str[i]
+    if all(s[i] == current_char for s in strs):
+        sLetter.append(current_char)
+    else:
+        break
+final = ''.join(sLetter)
+print(final)
+```
 # Valid Parenthese :
-
+```py
     def is_valid_parentheses(s):
         stack = []
         mapping = {')': '(', '}': '{', ']': '['}                    # Mapping key
@@ -50,9 +45,9 @@
         return not stack                                            # add to stack so that it can be use for closing paretheses in later on
 
     is_valid_parentheses("()[]{}")
-
+```
 # Merge and sort :
-
+```py
     def MergeAndSort():
         list1 = [1,2,4]
         list2 = [1,3,4]
@@ -68,9 +63,9 @@
         
         total.sort()
         return total
-
+```
 # Link list Merge and sort :
-
+```py
     # Definition for singly-linked list.
     # class ListNode(object):
     #     def __init__(self, val=0, next=None):
@@ -98,9 +93,9 @@
             current.next = list1 if list1 else list2
             
             return dummy.next
-
+```
 # Duplicate checking :
-
+```py
     class Solution(object):
         def removeDuplicates(self, nums):
             """
@@ -117,9 +112,9 @@
                     nums[k] = nums[i]  
                     k += 1
             return k  
-
+```
 # Remove Element :
-
+```py
     class Solution(object):
     def removeElement(self, nums, val):
         """
@@ -134,14 +129,14 @@
                 nums[k] = nums[i]
                 k += 1
         return k
-
+```
 # Finding Index :
-
+```py
     def Index(self, haystack, needle):
         return haystack.find(needle)
-
+```
 # Search Insert Index :
-    
+```py
     <!-- Variable -->
     nums = [1, 3, 5, 6] 
     target = 5
@@ -149,14 +144,14 @@
     index = 0
     index = next((i for i in range(len(nums)) if nums[i] >= target), len(nums))
     return index
-
+```
 # Explicit Split :
-
+```py
     def lengthOfLastWord(s):
         return len(s.strip().split()[-1])
-    
+```
 # List Addition :
-
+```py
     digits[-1] += 1 
     for i in range(len(digits) - 1, -1, -1):  
         if digits[i] >= 10: 
@@ -166,16 +161,16 @@
             else:
                 digits[i - 1] += 1
     return digits
-
+```
 # Convert into Binary :
-
+```py
     <!-- int(a, 2) meaning 2 is the binary and if chage to 10, it's decimal -->
 
     <!-- Main -->
     return bin(int(a, 2) + int(b, 2))[2:]
-
+```
 # Squre root without Built-in :
-
+```py
     class Solution(object):
         def mySqrt(self, x):
             if x < 2:
@@ -193,9 +188,9 @@
                     right = mid - 1  
 
             return result
-
+```
 # Counting Possibility of step :
-
+```py
     def Step(n):
         if n == 0:
         return 0
@@ -207,9 +202,9 @@
         for i in range(2, n + 1):
             ways[i] = ways[i - 1] + ways[i - 2]
         return ways[n]
-
+```
 # Remove Duplicate in sorted list :
-
+```py
     # Basic Using Array
 
     def DuplicateRemover(head):
@@ -232,9 +227,9 @@
             else:
                 current = current.next
         return head
-
+```
 # Merging List U
-
+```py
     # Using Basic 
 
     def merge(nums1: List[int], m: int, nums2: List[int], n: int) -> None:
@@ -269,9 +264,9 @@
                 p2 -= 1
             p -= 1
         nums1[:p2 + 1] = nums2[:p2 + 1]
-
+```
 # Binary Tree inorder Travelsal :
-
+```py
     def inorderTraversal(self, root: Optional[TreeNode]) -> List[int]:
         res = []
         def inorderDFS(root):
@@ -283,18 +278,18 @@
             
         inorderDFS(root)
         return res
-
+```
 # Same tree :
-
+```py
     def SameTree(self, p: Optional[TreeNode], q: Optional[TreeNode]) -> bool:
     if not p and not q:
         return True
     if not p or not q or p.val != q.val:
         return False
     return self.isSameTree(p.left, q.left) and self.isSameTree(p.right, q.right)
-
+```
 # Symnastic :
-
+```py
     def isSymmetric(self, root):
         def isMirror(t1, t2):
             if not t1 and not t2:
@@ -304,9 +299,9 @@
             return t1.val == t2.val and isMirror(t1.left, t2.right) and isMirror(t1.right, t2.left)
         
         return isMirror(root, root)
-
+```
 # MaxDepth :
-
+```py
     def maxDepth(self, root):
         """
         :type root: Optional[TreeNode]
@@ -320,9 +315,9 @@
         Rdepth = self.maxDepth(root.right)
         
         return 1 + max(Ldepth, Rdepth)
-    
+```
 # Add two numbers :
-
+```py
     class ListNode(object):
         def __init__(self, val=0, next=None):
             self.val = val
@@ -361,9 +356,9 @@
             
             # Return the result list, skipping the dummy node
             return dummy.next
-
+```
 # Longest Substring Character :
-
+```py
     class Solution:
         def lengthOfLongestSubstring(self, s: str) -> int:
             # Hash set to store unique characters in the current window
@@ -384,9 +379,9 @@
                 max_length = max(max_length, end - start + 1)
             
             return max_length
-
+```
 # Median Sorted Array :
-
+```py
     def findMedianSortedArrays(self, nums1, nums2):
         merged = nums1 + nums2
         merged.sort()
@@ -397,3 +392,4 @@
             middle1 = merged[n // 2 - 1]
             middle2 = merged[n // 2]
             return (middle1 + middle2) / 2.0
+```
