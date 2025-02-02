@@ -39,7 +39,7 @@ panindorme = lambda sub : sub == sub[::-1]
 - check if it bigger than the previous longest string
 - if both true then it'll store new string
 ---
-## This's the easy way, here's for better time complexity [O(n)]()
+## This's the easy way, here's for better time complexity [O(n)](https://github.com/T0fuHasuu/CheatSheet/blob/main/Leetcode/Longest%20Palindromic%20Substring/BetterMain.py)
 ```py
 class Solution(object):
     def longestPalindrome(self, s):
